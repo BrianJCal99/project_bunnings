@@ -10,7 +10,7 @@ import os
 load_dotenv()
 
 # Get the API key
-API_KEY = os.getenv("API_KEY")
+API_KEY = os.getenv("GOOGLE_PLACES_API_KEY")
 
 def get_place_id(suburb: str, api_key: str):
     """Find the Place ID for a Bunnings Warehouse in the given suburb."""

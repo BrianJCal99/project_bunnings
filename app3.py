@@ -11,14 +11,14 @@ import os
 load_dotenv()
 
 # Get the API key
-API_KEY = os.getenv("API_KEY")
+API_KEY = os.getenv("GOOGLE_PLACES_API_KEY")
 
 # Create timestamp for file name
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
 # --- CONSTANTS ---
 SEARCH_QUERY = "Bunnings Warehouse"  # main search term
-OUTPUT_FILE = f"bunnings_store_ratings_{timestamp}.csv"
+OUTPUT_FILE = f"./data/bunnings_store_ratings_{timestamp}.csv"
 
 def get_all_bunnings_stores(api_key):
     """
