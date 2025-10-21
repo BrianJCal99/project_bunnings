@@ -10,7 +10,7 @@ import os
 load_dotenv()
 
 # Get the API key
-API_KEY = os.getenv("API_KEY")
+API_KEY = os.getenv("GOOGLE_PLACES_API_KEY")
 
 # Create timestamp for file name
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -58,7 +58,7 @@ def get_bunnings_reviews(place_id: str, api_key: str):
 
 def save_reviews_to_csv(suburb: str, store_info: dict, reviews: list):
     """Save reviews and store information to a CSV file."""
-    filename = f"bunnings_reviews_{suburb.lower()}_{timestamp}.csv"
+    filename = f"./data/bunnings_reviews_{suburb.lower()}_{timestamp}.csv"
 
     with open(filename, "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.writer(csvfile)
